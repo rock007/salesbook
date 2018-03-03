@@ -1,7 +1,0 @@
-﻿Save Format v3.0(19990112)
-@begin Libraries
- "sales-controls.pbl" "";
-@end;
-@begin Objects 
- "uv_act_bar.sru" "sales-controls.pbl";
-@end;

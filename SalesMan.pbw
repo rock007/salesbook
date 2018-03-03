@@ -7,5 +7,5 @@ Save Format v3.0(19990112)
  1 "advguisample.pbt";
  2 "dotnetform.pbt";
 @end;
-DefaultTarget "salemanmis.pbt";
-DefaultRemoteTarget "salemanmis.pbt";
+DefaultTarget "advguisample.pbt";
+DefaultRemoteTarget "advguisample.pbt";

@@ -4,5 +4,5 @@ Save Format v3.0(19990112)
 @end;
 appname "salemanmis";
 applib "salemanmis.pbl";
-LibList "salemanmis.pbl;nnn.pbl;advguicontrols.pbl;advguiobjects.pbl;datawindow.pbl;sales-controls.pbl";
+LibList "salemanmis.pbl;advguicontrols.pbl;advguiobjects.pbl;datawindow.pbl;sales-controls.pbl";
 type "pb";
