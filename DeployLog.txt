@@ -1,0 +1,117 @@
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if "" == "" set NET_FRAMEWORK_PB170=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\csc
+Microsoft (R) Visual C# Compiler version 4.7.2556.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+warning CS2008: 未指定源文件
+error CS1562: 必须为没有源的输出指定 /out 选项
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if errorlevel 9009 exit 3 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>"d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\pb2cs" @"projectinfo.txt" 
+Type-checking (pass 1) system (system)
+Pre-parsing takes 0.00 seconds
+Parsing d:\sam\code\pb12\salemanmis\dotnetform.pbl (dotnetform)
+Parsing d:\sam\code\pb12\salemanmis\dotnetform.pbl (w_main)
+Parsing takes 0.00 seconds
+Type-checking (pass 1) d:\sam\code\pb12\salemanmis\dotnetform.pbl (dotnetform)
+Type-checking (pass 1) d:\sam\code\pb12\salemanmis\dotnetform.pbl (w_main)
+Type-checking (pass 1) d:\sam\code\pb12\salemanmis\dotnetform.pbl (dotnetform)
+Type-checking (pass 1) d:\sam\code\pb12\salemanmis\dotnetform.pbl (w_main)
+Type-checking (pass 1) d:\sam\code\pb12\salemanmis\dotnetform.pbl (dotnetform)
+Type-checking (pass 1) d:\sam\code\pb12\salemanmis\dotnetform.pbl (w_main)
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking methods(pass 2) d:\sam\code\pb12\salemanmis\dotnetform.pbl (dotnetform)
+Type-checking methods(pass 2) d:\sam\code\pb12\salemanmis\dotnetform.pbl (w_main)
+Typechecking takes 1.00 seconds
+Emitting d:\sam\code\pb12\salemanmis\dotnetform.pbl (dotnetform)
+Emitting d:\sam\code\pb12\salemanmis\dotnetform.pbl (w_main)
+Emitting d:\sam\code\pb12\salemanmis\dotnetform.pbl (dotnetform)
+Emitting d:\sam\code\pb12\salemanmis\dotnetform.pbl (w_main)
+Emiting takes 0.00 seconds
+
+
+Error Summary : 0 error(s) 
+
+
+
+Warning Summary : 0 warning(s) 
+
+
+
+Compile complete -- 0 error(s), 0 warning(s)
+
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if ERRORLEVEL 1 exit 1 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if ERRORLEVEL 6 exit 6 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if ERRORLEVEL 7 exit 7 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if ERRORLEVEL 8 exit 8 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>call build.bat  c- "D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build\csc_output_file_name.txt"  
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>setlocal
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if "c-" == "" goto usage  
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if "d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET" == "" goto sethome 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>set NET_FRAMEWORK_PB170=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>md debug 
+子目录或文件 debug 已经存在。
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if "c-" == "c-" goto notcopy 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>xcopy /D /Y "d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\App.Win.exe.manifest" debug\ 
+D:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\App.Win.exe.manifest
+复制了 1 个文件
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>del debug\dotnetform.exe.manifest 
+找不到 D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build\debug\dotnetform.exe.manifest
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>ren debug\App.Win.exe.manifest dotnetform.exe.manifest 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>xcopy /D /Y "d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\ModifyManifest.vbs"  
+D:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\modifymanifest.vbs
+复制了 1 个文件
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>ModifyManifest debug\dotnetform.exe.manifest asinvoker false 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>del ModifyManifest.vbs 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>reg import "d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\PBExceptionTrace.reg" 
+错误: 访问注册表时出错。
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if "D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build\csc_output_file_name.txt" == "" (C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\csc /t:winexe /debug    /nowin32manifest /platform:x86 "/r:d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\com.sybase.ejb.net.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"debug\dotnetform.exe" @mb.rsp )  else (C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\csc /t:winexe /debug    /nowin32manifest /platform:x86 "/r:d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\com.sybase.ejb.net.dll;d:\Program Files (x86)\Appeon\PowerBuilder 17.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"debug\dotnetform.exe" @mb.rsp  1>"D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build\csc_output_file_name.txt" ) 
+Build Succeeded.
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>rem "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\mt.exe" -nologo -manifest debug\dotnetform.exe.manifest -outputresource:debug\dotnetform.exe;#1 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>rem @if errorlevel 1 (goto embedmanifesterror) else echo Embedding Manifest Succeeded. 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>del debug\dotnetform.exe.manifest 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>rem "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\sn.exe" -R debug\dotnetform.exe  
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>goto end 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>endlocal
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if ERRORLEVEL 1 exit 2 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if exist createole.bat call createole.bat 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if ERRORLEVEL 1 exit 4 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if exist createole.bat xcopy ole\*.* debug\ /D /Y 
+
+D:\sam\code\pb12\SaleManMis\dotnetform.pbt_build>if exist createole.bat dir ole\*.*  /B  1>"D:\sam\code\pb12\SaleManMis\p_dotnetform_winform_oledllname.txt" 

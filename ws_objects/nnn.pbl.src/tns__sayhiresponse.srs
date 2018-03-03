@@ -1,0 +1,6 @@
+﻿$PBExportHeader$tns__sayhiresponse.srs
+$PBExportComments$Proxy imported from Web service using Web Service Proxy Generator.
+global type tns__sayHiResponse from structure
+   string ws_return
+end type
+

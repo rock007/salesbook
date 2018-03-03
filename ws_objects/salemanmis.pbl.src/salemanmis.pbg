@@ -1,0 +1,29 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "salemanmis.pbl" "";
+@end;
+@begin Objects 
+ "salemanmis.sra" "salemanmis.pbl";
+ "d_test.srd" "salemanmis.pbl";
+ "dw_dic_city.srd" "salemanmis.pbl";
+ "dw_dic_province.srd" "salemanmis.pbl";
+ "dw_login.srd" "salemanmis.pbl";
+ "dw_user_list.srd" "salemanmis.pbl";
+ "p_saleman_exe.srj" "salemanmis.pbl";
+ "m_menu.srm" "salemanmis.pbl";
+ "u_cst_cat_tab.sru" "salemanmis.pbl";
+ "u_cst_category_tab.sru" "salemanmis.pbl";
+ "u_cst_home.sru" "salemanmis.pbl";
+ "u_cst_order.sru" "salemanmis.pbl";
+ "u_cst_tab1.sru" "salemanmis.pbl";
+ "u_cst_test1.sru" "salemanmis.pbl";
+ "uo_db_connect.sru" "salemanmis.pbl";
+ "w_cat_edit.srw" "salemanmis.pbl";
+ "w_login.srw" "salemanmis.pbl";
+ "w_main.srw" "salemanmis.pbl";
+ "w_product_edit.srw" "salemanmis.pbl";
+ "w_sys_main.srw" "salemanmis.pbl";
+ "w_user_add.srw" "salemanmis.pbl";
+ "w_user_edit.srw" "salemanmis.pbl";
+ "w_user_list.srw" "salemanmis.pbl";
+@end;

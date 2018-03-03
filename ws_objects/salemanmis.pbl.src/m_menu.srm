@@ -1,0 +1,384 @@
+﻿$PBExportHeader$m_menu.srm
+forward
+global type m_menu from menu
+end type
+type m_user from menu within m_menu
+end type
+type m_user_add from menu within m_user
+end type
+type m_user_list from menu within m_user
+end type
+type m_user from menu within m_menu
+m_user_add m_user_add
+m_user_list m_user_list
+end type
+type m_com from menu within m_menu
+end type
+type m_com_add from menu within m_com
+end type
+type m_com_list from menu within m_com
+end type
+type m_com from menu within m_menu
+m_com_add m_com_add
+m_com_list m_com_list
+end type
+type m_search from menu within m_menu
+end type
+type m_system from menu within m_menu
+end type
+type m_about from menu within m_system
+end type
+type m_system from menu within m_menu
+m_about m_about
+end type
+global type m_menu from menu
+m_user m_user
+m_com m_com
+m_search m_search
+m_system m_system
+end type
+end forward
+
+global type m_menu from menu
+m_user m_user
+m_com m_com
+m_search m_search
+m_system m_system
+end type
+global m_menu m_menu
+
+on m_menu.create
+m_menu=this
+call super::create
+this.text = "m_menu"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_user=create m_user
+this.m_com=create m_com
+this.m_search=create m_search
+this.m_system=create m_system
+this.Item[UpperBound(this.Item)+1]=this.m_user
+this.Item[UpperBound(this.Item)+1]=this.m_com
+this.Item[UpperBound(this.Item)+1]=this.m_search
+this.Item[UpperBound(this.Item)+1]=this.m_system
+end on
+
+on m_menu.destroy
+call super::destroy
+destroy(this.m_user)
+destroy(this.m_com)
+destroy(this.m_search)
+destroy(this.m_system)
+end on
+
+type m_user from menu within m_menu
+m_user_add m_user_add
+m_user_list m_user_list
+end type
+
+on m_user.create
+call super::create
+this.text = "产品中心"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_user_add=create m_user_add
+this.m_user_list=create m_user_list
+this.Item[UpperBound(this.Item)+1]=this.m_user_add
+this.Item[UpperBound(this.Item)+1]=this.m_user_list
+end on
+
+on m_user.destroy
+call super::destroy
+destroy(this.m_user_add)
+destroy(this.m_user_list)
+end on
+
+type m_user_add from menu within m_user
+end type
+
+on m_user_add.create
+call super::create
+this.text = "添加用户"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_user_add.destroy
+call super::destroy
+end on
+
+event clicked;//
+open(w_user_edit)
+end event
+
+type m_user_list from menu within m_user
+end type
+
+on m_user_list.create
+call super::create
+this.text = "查看"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_user_list.destroy
+call super::destroy
+end on
+
+event clicked;//
+open(w_user_list)
+end event
+
+type m_com from menu within m_menu
+m_com_add m_com_add
+m_com_list m_com_list
+end type
+
+on m_com.create
+call super::create
+this.text = "订单管理"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_com_add=create m_com_add
+this.m_com_list=create m_com_list
+this.Item[UpperBound(this.Item)+1]=this.m_com_add
+this.Item[UpperBound(this.Item)+1]=this.m_com_list
+end on
+
+on m_com.destroy
+call super::destroy
+destroy(this.m_com_add)
+destroy(this.m_com_list)
+end on
+
+type m_com_add from menu within m_com
+end type
+
+on m_com_add.create
+call super::create
+this.text = "添加公司"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_com_add.destroy
+call super::destroy
+end on
+
+event clicked;
+//
+end event
+
+type m_com_list from menu within m_com
+end type
+
+on m_com_list.create
+call super::create
+this.text = "查看"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_com_list.destroy
+call super::destroy
+end on
+
+event clicked;//
+
+end event
+
+type m_search from menu within m_menu
+end type
+
+on m_search.create
+call super::create
+this.text = "报表查询"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_search.destroy
+call super::destroy
+end on
+
+type m_system from menu within m_menu
+m_about m_about
+end type
+
+on m_system.create
+call super::create
+this.text = "系统设置"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_about=create m_about
+this.Item[UpperBound(this.Item)+1]=this.m_about
+end on
+
+on m_system.destroy
+call super::destroy
+destroy(this.m_about)
+end on
+
+type m_about from menu within m_system
+end type
+
+event clicked;////
+//String ls_color
+//
+//ls_color = Upper(this.Text(index))
+//
+//uo_toolbarstrip.of_SetTheme(ls_color)
+//uo_xplistbar.of_SetTheme(ls_color)
+//uo_tabcontrol.of_SetTheme(ls_color)
+//
+//If IsValid(iuo_1) Then
+//	iuo_1.of_SetTheme(ls_color)
+//	//iuo_2.of_SetTheme(ls_color)
+//	//iuo_3.of_SetTheme(ls_color)
+//	//iuo_4.of_SetTheme(ls_color)
+//	//iuo_5.of_SetTheme(ls_color)
+//End If
+//
+end event
+
+on m_about.create
+call super::create
+this.text = "关于"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_about.destroy
+call super::destroy
+end on
+

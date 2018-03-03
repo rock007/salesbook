@@ -1,0 +1,17 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "datawindow.pbl" "";
+@end;
+@begin Objects 
+ "dw_ddl_dict.srd" "datawindow.pbl";
+ "dw_dict_list.srd" "datawindow.pbl";
+ "dw_product_cat_edit.srd" "datawindow.pbl";
+ "dw_product_cat_list.srd" "datawindow.pbl";
+ "dw_product_edit.srd" "datawindow.pbl";
+ "dw_product_factory.srd" "datawindow.pbl";
+ "dw_product_factory_edit.srd" "datawindow.pbl";
+ "dw_product_list.srd" "datawindow.pbl";
+ "dw_shop_product.srd" "datawindow.pbl";
+ "dw_shop_product_edit.srd" "datawindow.pbl";
+ "dw_tv_cat.srd" "datawindow.pbl";
+@end;
